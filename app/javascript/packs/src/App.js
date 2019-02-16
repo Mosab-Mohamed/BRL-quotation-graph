@@ -1,4 +1,5 @@
 import React from "react";
+import Routes from "./components/routes/Routes";
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -6,7 +7,7 @@ class App extends React.PureComponent {
     this.state = {};
   }
   render() {
-    return <div>Hello React</div>;
+    return <Routes />;
   }
 }
 
