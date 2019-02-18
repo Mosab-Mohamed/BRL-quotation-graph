@@ -3,8 +3,6 @@ import { Api } from "../../services";
 import moment from "moment";
 import LineChart from "./LineChart";
 
-import QuotationChangeChart from "../../components/QuotationChangeChart";
-
 class QuotationCharts extends React.Component {
   constructor(props) {
     super(props);
