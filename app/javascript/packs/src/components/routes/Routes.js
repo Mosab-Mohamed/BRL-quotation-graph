@@ -25,7 +25,27 @@ const RouterBase = ({ component: Component, path, secure, ...rest }) => {
 export default () => (
   <Router>
     <Switch>
-      <Route path="/" exact component={QuotationCharts} />
+      <Route
+        path="/"
+        exact
+        render={props => (
+          <QuotationCharts {...props} fromCurrency="BRL" toCurrency="USD" />
+        )}
+      />
+      <Route
+        path="/brl-to-eur"
+        exact
+        render={props => (
+          <QuotationCharts {...props} fromCurrency="BRL" toCurrency="EUR" />
+        )}
+      />
+      <Route
+        path="/brl-to-aud"
+        exact
+        render={props => (
+          <QuotationCharts {...props} fromCurrency="BRL" toCurrency="AUD" />
+        )}
+      />
     </Switch>
   </Router>
 );
