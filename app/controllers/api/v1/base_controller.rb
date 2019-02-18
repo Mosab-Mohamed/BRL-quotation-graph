@@ -9,7 +9,7 @@ class Api::V1::BaseController < ActionController::Base
     def error_occurred(exception)
       @message = 'Internal Server Error'
       render 'api/v1/shared/empty', status: :internal_server_error
-      p "API ERROR: error => #{@message}, stack trace => #{exception.backtrace.join("\n")}"
+      p "API ERROR: error => #{exception}, stack trace => #{exception.backtrace.join("\n")}"
     end
   
     def render_unprocessable
